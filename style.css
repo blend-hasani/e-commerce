@@ -378,9 +378,10 @@ nav .logo.space {
 }
 
 .closex {
+  margin: 20px;
   cursor: pointer;
   text-align: center;
-  width: 20px;
+  width: 20%;
   font-size: 18px;
   height: 30px;
   font-weight: bold;
