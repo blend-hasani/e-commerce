@@ -55,6 +55,11 @@ fetch("https://fakestoreapi.com/products")
         container.appendChild(productdetails);
         productdetails.textContent = "Check details";
 
+        if (window.innerWidth >= 768) {
+          productdetails.style.display = "block";
+        } else {
+          productdetails.style.display = "none";
+        }
         const btn = document.createElement("button");
         container.appendChild(btn);
         btn.textContent = "Add to cart";
@@ -110,6 +115,12 @@ fetch("https://fakestoreapi.com/products")
         karta.addEventListener("click", () => {
           wrapper.classList.add("wrapper");
           wrapper.classList.remove("hide");
+          items.classList.remove("active");
+          menuBtn.classList.remove("hide");
+          searchBtn.classList.remove("hide");
+          cancelBtn.classList.remove("show");
+          form.classList.remove("active");
+          cancelBtn.style.color = "#ff3d00";
         });
 
         function cart() {
@@ -145,7 +156,7 @@ fetch("https://fakestoreapi.com/products")
 
           price.textContent = `Qmimi: ${product.price}`;
           qmimi += product.price;
-          totali.innerHTML = `<h1>Totali: ${qmimi.toFixed(2)}`;
+          totali.innerHTML = `<h1>Totali: ${qmimi.toFixed(2)} $`;
           alert(`Produkti "${product.title}" u shtua ne shportë`);
           wrapper.removeChild(shportazbrazt);
         }
