@@ -408,3 +408,40 @@ nav .logo.space {
 .stopscroll {
   overflow: hidden;
 }
+
+@media only screen and (max-width: 600px) {
+  .maindiv {
+    width: 100%;
+    height: 90%;
+    /* border: solid 5px red; */
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px gray;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .divdesc {
+    width: 90%;
+    height: 580px;
+    /* border: solid 5px red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .imgdiv {
+    width: 90%;
+    height: 580px;
+    padding: 20px;
+    cursor: pointer;
+  }
+}

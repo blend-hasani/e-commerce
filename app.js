@@ -1,5 +1,4 @@
 const banner = document.querySelector("banner");
-
 fetch("https://fakestoreapi.com/products")
   .then((res) => res.json())
   .then(
@@ -28,6 +27,8 @@ fetch("https://fakestoreapi.com/products")
 
       let qmimi = 0;
 
+      // call the function when the page loads
+
       for (let i = 0; i < 20; i++) {
         const product = json[i];
 
@@ -55,11 +56,12 @@ fetch("https://fakestoreapi.com/products")
         container.appendChild(productdetails);
         productdetails.textContent = "Check details";
 
-        if (window.innerWidth >= 768) {
-          productdetails.style.display = "block";
-        } else {
-          productdetails.style.display = "none";
-        }
+        // if (window.innerWidth >= 768) {
+        //   productdetails.style.display = "block";
+        // } else {
+        //   productdetails.style.display = "none";
+        // }
+
         const btn = document.createElement("button");
         container.appendChild(btn);
         btn.textContent = "Add to cart";
@@ -110,6 +112,16 @@ fetch("https://fakestoreapi.com/products")
             document.body.classList.remove("stopscroll");
           });
         });
+        function checkmobile() {
+          // here we check if device is mobile it doesnt display product details box
+          if (window.innerWidth >= 768) {
+            productdetails.style.display = "block";
+          } else {
+            productdetails.style.display = "none";
+          }
+        }
+
+        // checkmobile();
 
         const karta = document.getElementById("cart");
         karta.addEventListener("click", () => {
