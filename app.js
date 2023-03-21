@@ -122,6 +122,8 @@ fetch("https://fakestoreapi.com/products")
 
           closex.addEventListener("click", () => {
             wrapper.removeChild(cart);
+            qmimi -= product.price;
+            totali.innerHTML = `<h1>Totali: ${qmimi.toFixed(2)}`;
           });
 
           const cartphoto = document.createElement("div");
