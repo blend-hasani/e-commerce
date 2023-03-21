@@ -86,9 +86,9 @@ fetch("https://fakestoreapi.com/products")
           imgdiv.classList.add("imgdiv");
           divdesc.classList.add("divdesc");
           closex.classList.add("closex");
+          maindiv.appendChild(closex);
           maindiv.appendChild(imgdiv);
           maindiv.appendChild(divdesc);
-          maindiv.appendChild(closex);
 
           closex.textContent = "X";
           imgdiv.style.backgroundImage = `url(${product.image}) `;
