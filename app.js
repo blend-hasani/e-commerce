@@ -17,7 +17,6 @@ fetch("https://fakestoreapi.com/products")
     shportazbrazt.textContent = "Your cart is empty";
     wrapper.appendChild(shportazbrazt);
 
-    wrapper.id = "parentDiv";
     document.body.appendChild(wrapper);
 
     const totali = document.createElement("div");
